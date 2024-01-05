@@ -13,7 +13,7 @@ nextcloud:
 image:
   repository: ghcr.io/pavelbaranov/nextcloud
   pullPolicy: Always
-  tag: "latest"
+  tag: "v0.0.1"
 
 nameOverride: ""
 fullnameOverride: ""
@@ -37,12 +37,12 @@ service:
 
 ingress:
   enabled: true
-  name: my-nextcloud2-ingress
+  name: my-nextcloud3-ingress
   className: ""
   annotations:
     kubernetes.io/ingress.class: nginx
   hosts:
-    - host: my-nextcloud2.k8s-1.sa
+    - host: my-nextcloud3.k8s-1.sa
       paths:
         - path: /
           pathType: ImplementationSpecific
