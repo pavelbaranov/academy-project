@@ -1,0 +1,32 @@
+name: project-pipeline
+
+on:
+  workflow_dispatch:
+
+jobs:
+  build:
+    name: ci-cd project
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checks-out the repository
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: '0'
+          
+      - name: "Hadolint"
+        uses: jbergstroem/hadolint-gh-action@v1
+        with:
+          dockerfile: "./Docker/Dockerfile"
+
+      - name: Bump version and push tag
+        id: tag_version
+        uses: mathieudutour/github-tag-action@v6.1
+        with:
+          github_token: ${{ secrets.GH_PAT }}
+
+
+      - name: Build and push
+        run: |
+          docker login --username pavelbaranov --password ${{ secrets.GH_PAT }} ghcr.io
+          docker build -t ghcr.io/pavelbaranov/nextcloud:${{ steps.tag_version.outputs.new_tag }} ./Docker
+          docker push ghcr.io/pavelbaranov/nextcloud:${{ steps.tag_version.outputs.new_tag }}
