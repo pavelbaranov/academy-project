@@ -50,11 +50,10 @@ jobs:
           mv /home/runner/work/academy-project/academy-project/my-nextcloud-* ./helm-release
           ls
           ls helm-release/ 
-          cd ..
           helm repo index --url https://pavelbaranov.github.io/academy-project/ --merge index.yaml .
           cat index.yaml
         env:
-          GH_TOKEN: ${{ secrets.GH_PAT }}
+          GH_PAT: ${{ secrets.GH_PAT }}
      
       - name: Commit and push changes
         run: |
