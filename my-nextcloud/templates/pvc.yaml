@@ -2,7 +2,7 @@
 apiVersion: v1
 kind: PersistentVolumeClaim
 metadata:
-  name: pv-claim-helm-nextcloud2
+  name: pv-claim-helm-nextcloud3
   labels:
     {{- include "my-nextcloud.labels" . | nindent 4 }}
 spec:
