@@ -30,3 +30,30 @@ jobs:
           docker login --username pavelbaranov --password ${{ secrets.GH_PAT }} ghcr.io
           docker build -t ghcr.io/pavelbaranov/nextcloud:${{ steps.tag_version.outputs.new_tag }} ./Docker
           docker push ghcr.io/pavelbaranov/nextcloud:${{ steps.tag_version.outputs.new_tag }}
+
+      - name: set up Helm
+        uses: azure/setup-helm@v3
+        with:
+          token: ${{ secrets.GH_PAT }}
+          
+      - name: helm-check
+        uses: igabaydulin/helm-check-action@0.1.4
+        env:
+          CHART_LOCATION: ./helm-source/
+          CHART_VALUES: ./helm-source/values.yaml   
+      
+      - name: Publish Helm charts
+        run: |
+          cd helm-source/
+          helm package my-nextcloud --version=${{ steps.tag_version.outputs.new_tag }} --app-version=${{ steps.tag_version.outputs.new_tag }}
+          mv my-nextcloud-* ../helm-release
+          cd ..
+          helm repo index --url https://pavelbaranov.github.io/academy-project/ --merge index.yaml .
+     
+      - name: Commit and push changes
+        run: |
+          git config user.name github-actions
+          git config user.email github-actions@github.com
+          git add --all
+          git commit -m "Publish my-nextcloud:${{ steps.tag_version.outputs.new_tag }}"
+          git push origin main
