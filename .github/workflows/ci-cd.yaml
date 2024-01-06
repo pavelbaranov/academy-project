@@ -46,6 +46,7 @@ jobs:
       
       - name: Publish Helm charts
         run: |
+          docker login --username pavelbaranov --password ${{ secrets.GH_PAT }} ghcr.io
           helm package my-nextcloud --version=${{ steps.tag_version.outputs.new_tag }} --app-version=${{ steps.tag_version.outputs.new_tag }}
           mv /home/runner/work/academy-project/academy-project/my-nextcloud-* ./helm-release
           ls
