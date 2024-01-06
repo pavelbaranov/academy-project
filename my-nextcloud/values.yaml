@@ -71,7 +71,7 @@ pvc:
 volumes:
   - name: persistent-storage
     persistentVolumeClaim:
-      claimName: pv-claim-helm-nextcloud3
+      claimName: pv-claim-helm-nextcloud-app
 #persistentVolumeClaim:
 #   storageSize: 14Gi
 volumeMounts:
