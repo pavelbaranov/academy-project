@@ -65,6 +65,8 @@ pvc:
   storage_class: nfs
   storage_size: 14Gi
 
+
+
 # Additional volumes on the output Deployment definition.
 volumes:
   - name: persistent-storage
@@ -72,10 +74,10 @@ volumes:
       claimName: pv-claim-helm-nextcloud
 #persistentVolumeClaim:
 #   storageSize: 14Gi
-#volumeMounts:
-#  - name: persistent-storage
-#    mountPath: ""
-#nodeSelector: {}
+volumeMounts:
+  - name: persistent-storage
+    mountPath: "/var/www/html/data"
+nodeSelector: {}
 
 tolerations: []
 
