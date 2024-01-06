@@ -71,12 +71,12 @@ pvc:
 volumes:
   - name: persistent-storage
     persistentVolumeClaim:
-      claimName: pv-claim-helm-nextcloud
+      claimName: pv-claim-helm-nextcloud2
 #persistentVolumeClaim:
 #   storageSize: 14Gi
 volumeMounts:
   - name: persistent-storage
-    mountPath: "/var/www/html/data"
+    mountPath: "/var/www/html"
 nodeSelector: {}
 
 tolerations: []
