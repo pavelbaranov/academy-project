@@ -39,12 +39,12 @@ jobs:
       - name: helm-check
         uses: igabaydulin/helm-check-action@0.1.4
         env:
-          CHART_LOCATION: ./helm-source/
-          CHART_VALUES: ./helm-source/values.yaml   
+          CHART_LOCATION: ./my-nextcloud/
+          CHART_VALUES: ./my-nextcloud/values.yaml   
       
       - name: Publish Helm charts
         run: |
-          cd helm-source/
+          cd my-nextcloud/
           helm package my-nextcloud --version=${{ steps.tag_version.outputs.new_tag }} --app-version=${{ steps.tag_version.outputs.new_tag }}
           mv my-nextcloud-* ../helm-release
           cd ..
