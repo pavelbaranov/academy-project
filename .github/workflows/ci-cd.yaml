@@ -62,3 +62,13 @@ jobs:
           git add --all
           git commit -m "Publish my-nextcloud:${{ steps.tag_version.outputs.new_tag }}"
           git push origin master
+
+      - name: Slack Notification
+        uses: rtCamp/action-slack-notify@v2
+        env:
+          SLACK_CHANNEL: nickvab_git
+          SLACK_COLOR: ${{ job.status }} 
+          SLACK_MESSAGE: 'A new image ${{ github.repository }}:${{ github.ref_name }} has been released'
+          SLACK_TITLE: Status
+          SLACK_USERNAME: academy-project
+          SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }} 

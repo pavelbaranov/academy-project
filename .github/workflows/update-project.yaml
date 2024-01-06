@@ -2,8 +2,7 @@ name: update project
 on:
     push:
       paths:
-        - my-nextcloud/**
-        - Docker/**
+
   
   jobs:
     build:
