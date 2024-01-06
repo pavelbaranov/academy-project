@@ -48,6 +48,7 @@ jobs:
         run: |
           helm package my-nextcloud --version=${{ steps.tag_version.outputs.new_tag }} --app-version=${{ steps.tag_version.outputs.new_tag }}
           mv my-nextcloud-* ../helm-release
+          ls
           ls helm-release/ 
           cd ..
           helm repo index --url https://pavelbaranov.github.io/academy-project/ --merge index.yaml .
