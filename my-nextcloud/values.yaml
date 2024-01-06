@@ -76,7 +76,7 @@ volumes:
 #   storageSize: 14Gi
 volumeMounts:
   - name: persistent-storage
-    mountPath: "/var/www/html"
+    mountPath: "/var/www/html/"
 nodeSelector: {}
 
 tolerations: []
