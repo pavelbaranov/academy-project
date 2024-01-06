@@ -55,4 +55,4 @@ jobs:
           git config user.email github-actions@github.com
           git add --all
           git commit -m "Publish my-nextcloud:${{ steps.tag_version.outputs.new_tag }}"
-          git push origin main
+          git push origin master

@@ -73,7 +73,7 @@ volumes:
     persistentVolumeClaim:
       claimName: pv-claim-helm-nextcloud-app
 ####persistentVolumeClaim:
-#   storageSize: 14Gi
+####   storageSize: 14Gi
 volumeMounts:
   - name: persistent-storage
     mountPath: "/var/www/html/data"
