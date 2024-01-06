@@ -3,7 +3,17 @@ entries:
   my-nextcloud:
   - apiVersion: v2
     appVersion: v0.2.0
-    created: "2024-01-06T19:51:09.165819528+03:00"
+    created: "2024-01-06T21:27:53.087556763Z"
+    description: A Helm chart for Kubernetes
+    digest: 665ea3ad98eeef5406dbd4a3aec55eb3b61d5ce222882e466439caf0bba5a0d0
+    name: my-nextcloud
+    type: application
+    urls:
+    - https://pavelbaranov.github.io/academy-project/helm-release/my-nextcloud-v1.2.0.tgz
+    version: v1.2.0
+  - apiVersion: v2
+    appVersion: v0.2.0
+    created: "2024-01-06T21:27:53.087207277Z"
     description: A Helm chart for Kubernetes
     digest: d322f4dae55494a616861187e56f6f25bb1d3a7f2197958b42ba91dbc7389af2
     name: my-nextcloud
@@ -13,7 +23,7 @@ entries:
     version: v1.1.0
   - apiVersion: v2
     appVersion: v0.2.0
-    created: "2024-01-06T19:51:09.16541451+03:00"
+    created: "2024-01-06T21:27:53.086836141Z"
     description: A Helm chart for Kubernetes
     digest: 438573d086568c2c496f002533579ffa20e887194368e417301d3aa51ac80ff3
     name: my-nextcloud
@@ -23,7 +33,7 @@ entries:
     version: v1.0.0
   - apiVersion: v2
     appVersion: v0.2.0
-    created: "2024-01-06T19:51:09.164981945+03:00"
+    created: "2024-01-06T21:27:53.08645712Z"
     description: A Helm chart for Kubernetes
     digest: 12875b6bb7c60daeb07c97d4e45f07f1298e698ad12bf5cde87a0da65f8fb974
     name: my-nextcloud
@@ -33,7 +43,7 @@ entries:
     version: v0.8.0
   - apiVersion: v2
     appVersion: v0.2.0
-    created: "2024-01-06T19:51:09.164615915+03:00"
+    created: "2024-01-06T21:27:53.086087927Z"
     description: A Helm chart for Kubernetes
     digest: 621f325a89358ef5a868c2157139e92e101bfd6223bc124cbaa35352b652a81e
     name: my-nextcloud
@@ -43,7 +53,7 @@ entries:
     version: v0.7.0
   - apiVersion: v2
     appVersion: v0.2.0
-    created: "2024-01-06T19:51:09.164257551+03:00"
+    created: "2024-01-06T21:27:53.085722341Z"
     description: A Helm chart for Kubernetes
     digest: ef195123ab62bc99d83e184b7b2c840abbe14e5a29522361eba61fa282ff4fe0
     name: my-nextcloud
@@ -53,7 +63,7 @@ entries:
     version: v0.6.0
   - apiVersion: v2
     appVersion: v0.2.0
-    created: "2024-01-06T19:51:09.163894134+03:00"
+    created: "2024-01-06T21:27:53.085195873Z"
     description: A Helm chart for Kubernetes
     digest: 2b06272daef915179ae4d2674503e082d3631cecb3d6ca0f0e62c2ac03247839
     name: my-nextcloud
@@ -63,7 +73,7 @@ entries:
     version: v0.5.0
   - apiVersion: v2
     appVersion: v0.2.0
-    created: "2024-01-06T19:51:09.163494305+03:00"
+    created: "2024-01-06T21:27:53.084630172Z"
     description: A Helm chart for Kubernetes
     digest: 66c9e38b22f3f23a22c87c55e3b5fd4d5afeded329f6e85456b8a91ab872169c
     name: my-nextcloud
@@ -73,7 +83,7 @@ entries:
     version: v0.4.0
   - apiVersion: v2
     appVersion: v0.2.0
-    created: "2024-01-06T19:51:09.163126012+03:00"
+    created: "2024-01-06T21:27:53.084202169Z"
     description: A Helm chart for Kubernetes
     digest: b75a8f6e55545b8e4dc4132f87848d3337af08f15721c4c00376993227ba42c8
     name: my-nextcloud
@@ -83,7 +93,7 @@ entries:
     version: v0.3.0
   - apiVersion: v2
     appVersion: v0.2.0
-    created: "2024-01-06T19:51:09.162759622+03:00"
+    created: "2024-01-06T21:27:53.083800175Z"
     description: A Helm chart for Kubernetes
     digest: 2ca9b781fddc8a2224a978db3c3cb633621e6443881675ac52c20e88b0d5ee6c
     name: my-nextcloud
@@ -93,7 +103,17 @@ entries:
     version: v0.2.0
   - apiVersion: v2
     appVersion: v0.1.0
-    created: "2024-01-06T19:51:09.16202751+03:00"
+    created: "2024-01-06T21:27:53.083409582Z"
+    description: A Helm chart for Kubernetes
+    digest: 7c215f82f9cc5aec29e36aaa54024f1057f91f64b4eb417088ff1a89ae1ada14
+    name: my-nextcloud
+    type: application
+    urls:
+    - https://pavelbaranov.github.io/academy-project/helm-release/my-nextcloud-v0.1.1.tgz
+    version: v0.1.0
+  - apiVersion: v2
+    appVersion: v0.1.0
+    created: "2024-01-06T21:27:53.08304581Z"
     description: A Helm chart for Kubernetes
     digest: 49b7a2adf6f60f4864382807222a6dce47fafb2b87e12d3c434dd2e27e30dc30
     name: my-nextcloud
@@ -102,13 +122,13 @@ entries:
     - https://pavelbaranov.github.io/academy-project/helm-release/my-nextcloud-v0.1.0.tgz
     version: v0.1.0
   - apiVersion: v2
-    appVersion: v0.1.0
-    created: "2024-01-06T19:51:09.162401657+03:00"
+    appVersion: v0.0.21
+    created: "2024-01-06T21:27:53.082636482Z"
     description: A Helm chart for Kubernetes
-    digest: 7c215f82f9cc5aec29e36aaa54024f1057f91f64b4eb417088ff1a89ae1ada14
+    digest: eba47eb4c5369bb9dd6885dc3600ef2661f2c600b794033502c1fea052efebdc
     name: my-nextcloud
     type: application
     urls:
-    - https://pavelbaranov.github.io/academy-project/helm-release/my-nextcloud-v0.1.1.tgz
-    version: v0.1.0
-generated: "2024-01-06T19:51:09.161496739+03:00"
+    - https://pavelbaranov.github.io/academy-project/helm-release/my-nextcloud-v0.0.21.tgz
+    version: v0.0.21
+generated: "2024-01-06T21:27:53.08210785Z"
