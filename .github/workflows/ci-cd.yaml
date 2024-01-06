@@ -48,7 +48,7 @@ jobs:
         run: |
           cat index.yaml
           helm package my-nextcloud --version=${{ steps.tag_version.outputs.new_tag }} --app-version=${{ steps.tag_version.outputs.new_tag }}
-          mv my-nextcloud-* ../helm-release
+          mv my-nextcloud-* ./helm-release
           ls
           ls helm-release/ 
           cd ..
