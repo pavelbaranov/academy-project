@@ -52,7 +52,7 @@ jobs:
           ls helm-release/ 
           cd ..
           helm repo index --url https://pavelbaranov.github.io/academy-project/ --merge index.yaml .
-          cat index.html
+          cat index.yaml
      
       - name: Commit and push changes
         run: |
