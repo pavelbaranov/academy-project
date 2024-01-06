@@ -44,7 +44,6 @@ jobs:
       
       - name: Publish Helm charts
         run: |
-          cd my-nextcloud/
           helm package my-nextcloud --version=${{ steps.tag_version.outputs.new_tag }} --app-version=${{ steps.tag_version.outputs.new_tag }}
           mv my-nextcloud-* ../helm-release
           cd ..
