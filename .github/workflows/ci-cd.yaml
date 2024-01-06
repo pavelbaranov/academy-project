@@ -1,6 +1,8 @@
 name: project-pipeline
 
 on:
+  push:
+    branches: [ "mater" ]
   workflow_dispatch:
 
 jobs:
