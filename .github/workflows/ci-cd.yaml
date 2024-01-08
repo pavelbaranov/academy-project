@@ -27,11 +27,11 @@ jobs:
           github_token: ${{ secrets.GH_PAT }}
 
 
-      #- name: Build and push
-        #run: |
-          #docker login --username pavelbaranov --password ${{ secrets.GH_PAT }} ghcr.io
-          #docker build -t ghcr.io/pavelbaranov/nextcloud:${{ steps.tag_version.outputs.new_tag }} ./Docker
-          #docker push ghcr.io/pavelbaranov/nextcloud:${{ steps.tag_version.outputs.new_tag }}
+      - name: Build and push
+        run: |
+          docker login --username pavelbaranov --password ${{ secrets.GH_PAT }} ghcr.io
+          docker build -t ghcr.io/pavelbaranov/nextcloud:${{ steps.tag_version.outputs.new_tag }} ./Docker
+          docker push ghcr.io/pavelbaranov/nextcloud:${{ steps.tag_version.outputs.new_tag }}
 
       - name: set up Helm
         uses: azure/setup-helm@v3
